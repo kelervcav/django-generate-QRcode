@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="">Input URL or text: </label>
+        <input type="text" name="input_text" maxlength="100">
+        <button type="submit">Generate</button>
+    </form>
+    <br>
+    {% if image %}
+        <img class="center-block" src="data:image/png;base64,{{ image }}"/>
+    {% endif %}
+</body>
+</html>
