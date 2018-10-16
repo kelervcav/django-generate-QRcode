@@ -1,0 +1,1 @@
+# Django Generate QRcode
